@@ -66,8 +66,9 @@ def main():
 
     if (remindees := dispatcher.bot_data.get('remindees')):
         for remindee in map(Remindee.from_dict, remindees.values()):
-            # jobqueue.run_daily(generate_remind(remindee), time=(datetime.now() + timedelta(seconds=10)).time())
-            jobqueue.run_once(generate_remind(remindee), when=1)
+            from datetime import datetime
+            from pytz import timezone
+            jobqueue.run_daily(generate_remind(remindee), time=timezone('Asia/Tokyo').localize(datetime(1970, 1, 1, 0, 0)))
 
     logger.info("Starting Polling...")
     updater.start_polling()
