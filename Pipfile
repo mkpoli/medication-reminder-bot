@@ -5,10 +5,12 @@ name = "pypi"
 
 [packages]
 python-telegram-bot = "*"
+pyparsing = "*"
+rainbow-logging-handler = "*"
+mashumaro = "*"
 
 [dev-packages]
 pipenv = "*"
 
 [requires]
 python_version = "3.9"
-

@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python (dev)",
+            "type": "python",
+            "request": "launch",
+            "program": "bot.py",
+            "console": "integratedTerminal",
+            "env": {
+                "DEPLOY_ENV": "dev"
+            }
+        }, {
+            "name": "Python (prod)",
+            "type": "python",
+            "request": "launch",
+            "program": "bot.py",
+            "console": "integratedTerminal",
+            "env": {
+                "DEPLOY_ENV": "prod"
+            }
+        }, {
+            "name": "Python Debug Date",
+            "type": "python",
+            "request": "launch",
+            "program": "calc_date.py",
+            "console": "integratedTerminal",
+            "env": {
+                "DEPLOY_ENV": "prod"
+            }
+        }
+    ]
+}
