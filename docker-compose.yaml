@@ -1,0 +1,9 @@
+version: "3.9"
+services: 
+  bot:
+    build: .
+    volumes:
+      - app:/app
+    restart: always
+volumes:
+  app:
